@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package microshopping;
+
+option go_package = "./proto;microshopping";
+
+// -----------------购物车服务Cart service-----------------
+
+// 服务接口
+service CartService {
+    // 添加商品
+    rpc AddItem(AddItemRequest) returns (Empty) {}
+    // 获得购物车
+    rpc GetCart(GetCartRequest) returns (Cart) {}
+    // 清空购物车
+    rpc EmptyCart(EmptyCartRequest) returns (Empty) {}
+}
+
+// 购物车商品
+message CartItem {
+    // 商品id
+    string product_id = 1;
+    // 数量
+    int32  quantity = 2;
+}
+
+// 添加商品请求消息
+message AddItemRequest {
+    // 用户id
+    string user_id = 1;
+    // 商品，引用上面的商品
+    CartItem item = 2;
+}
+
+// 清空购物车请求消息
+message EmptyCartRequest {
+    // 用户id
+    string user_id = 1;
+}
+
+// 获得购物车请求消息
+message GetCartRequest {
+    // 用户id
+    string user_id = 1;
+}
+
+// 购物车消息
+message Cart {
+    // 用户ID
+    string user_id = 1;
+    // 商品项切片
+    repeated CartItem items = 2;
+}
+
+// 清空购物车消息
+message Empty {}

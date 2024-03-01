@@ -1,0 +1,10 @@
+{{ define "text_ad" }}
+<div class="container py-3 px-lg-5 py-lg-5">
+    <div role="alert">
+        <strong>广告</strong>
+        <a href="{{.RedirectUrl}}" rel="nofollow" target="_blank">
+            {{.Text}}
+        </a>
+    </div>
+</div>
+{{ end }}

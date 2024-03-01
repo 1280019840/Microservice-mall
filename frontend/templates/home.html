@@ -1,0 +1,58 @@
+{{ define "home" }}
+
+{{ template "header" . }}
+<div {{ with $.platform_css }} class="{{.}}" {{ end }}>
+  <span class="platform-flag">
+    {{$.platform_name}}
+  </span>
+</div>
+<main role="main" class="home">
+
+  <div class="home-mobile-hero-banner d-lg-none"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-4 d-none d-lg-block home-desktop-left-image"></div>
+
+      <div class="col-12 col-lg-8">
+
+        <div class="row hot-products-row px-xl-6">
+
+          <div class="col-12">
+            <h3>热销产品</h3>
+          </div>
+
+          {{ range $.products }}
+          <div class="col-md-4 hot-product-card">
+            <a href="/product/{{.Item.Id}}">
+              <img alt="" src="{{.Item.Picture}}">
+              <div class="hot-product-card-img-overlay"></div>
+            </a>
+            <div>
+              <div class="hot-product-card-name">{{ .Item.Name }}</div>
+              <div class="hot-product-card-price">{{ renderMoney .Price }}</div>
+            </div>
+          </div>
+          {{ end }}
+
+        </div>
+
+        <div class="row d-none d-lg-block home-desktop-footer-row">
+          <div class="col-12 p-0">
+            {{ template "footer" . }}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<div class="d-lg-none">
+  {{ template "footer" . }}
+</div>
+
+{{ end }}

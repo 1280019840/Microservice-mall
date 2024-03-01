@@ -1,0 +1,112 @@
+{
+    "products": [
+        {
+            "id": "OLJCESPC7Z",
+            "name": "太阳镜",
+            "description": "这款时尚的飞行员太阳镜为您的服装增添现代感。",
+            "picture": "/static/img/products/sunglasses.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 19,
+                "nanos": 990000000
+            },
+            "categories": ["accessories"]
+        },
+        {
+            "id": "66VCHSJNUP",
+            "name": "背心",
+            "description": "完美剪裁的棉质背心，鸡心领。",
+            "picture": "/static/img/products/tank-top.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 18,
+                "nanos": 990000000
+            },
+            "categories": ["clothing", "tops"]
+        },
+        {
+            "id": "1YMWWN1N4O",
+            "name": "手表",
+            "description": "这款金色不锈钢腕表适用于您的大部分服装。",
+            "picture": "/static/img/products/watch.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 109,
+                "nanos": 990000000
+            },
+            "categories": ["accessories"]
+        },
+        {
+            "id": "L9ECAV7KIM",
+            "name": "平底鞋",
+            "description": "为您的夏季衣柜增添一份整洁。",
+            "picture": "/static/img/products/loafers.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 89,
+                "nanos": 990000000
+            },
+            "categories": ["footwear"]
+        },
+        {
+            "id": "2ZYFJ3GM2N",
+            "name": "吹风机",
+            "description": "这款轻便的吹风机有3个加热和速度设置。非常适合旅行。",
+            "picture": "/static/img/products/hairdryer.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 24,
+                "nanos": 990000000
+            },
+            "categories": ["hair", "beauty"]
+        },
+        {
+            "id": "0PUK6V6EV0",
+            "name": "烛台",
+            "description": "这个小而复杂的烛台是一个极好的礼物",
+            "picture": "/static/img/products/candle-holder.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 18,
+                "nanos": 990000000
+            },
+            "categories": ["decor", "home"]
+        },
+        {
+            "id": "LS4PSXUNUM",
+            "name": "盐和胡椒搅拌器",
+            "description": "给你的厨房增添一些风味。",
+            "picture": "/static/img/products/salt-and-pepper-shakers.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 18,
+                "nanos": 490000000
+            },
+            "categories": ["kitchen"]
+        },
+        {
+            "id": "9SIQT8TOJO",
+            "name": "竹玻璃罐",
+            "description": "这个竹玻璃罐可以容纳1.7升，非常适合任何厨房。",
+            "picture": "/static/img/products/bamboo-glass-jar.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 5,
+                "nanos": 490000000
+            },
+            "categories": ["kitchen"]
+        },
+        {
+            "id": "6E92ZMYYFZ",
+            "name": "杯子",
+            "description": "一个简单的带有芥末的杯子",
+            "picture": "/static/img/products/mug.jpg",
+            "priceUsd": {
+                "currencyCode": "USD",
+                "units": 8,
+                "nanos": 990000000
+            },
+            "categories": ["kitchen"]
+        }
+    ]
+}

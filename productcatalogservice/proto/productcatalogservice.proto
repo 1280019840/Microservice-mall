@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package microshopping;
+
+option go_package = "./proto;microshopping";
+
+// 当前币种描述
+message Money {
+    // 货币code 例如：EUR 欧元 USD 美元
+    string currency_code = 1;
+  
+    // 货币单位
+    //  例如，如果currencyCode是USD，则1个单位是1美元。
+    int64 units = 2;
+  
+    //数量的纳米（10^-9）单位。
+    //该值必须介于-99999999和+99999999之间。
+    //如果单位为正，纳米必须为正或零。
+    //如果单位为零，纳米可以为正、零或负。
+    //如果单位为负，纳米必须为负或零。
+  
+    //例如，$-1.75表示为 单位＝-1 和 纳米＝-75000000。
+    int32 nanos = 3;
+  }
+
+message Empty {}
+
+// ---------------商品分类服务Product Catalog----------------
+
+// 商品分类服务接口
+service ProductCatalogService {
+    rpc ListProducts(Empty) returns (ListProductsResponse) {}
+    rpc GetProduct(GetProductRequest) returns (Product) {}
+    rpc SearchProducts(SearchProductsRequest) returns (SearchProductsResponse) {}
+}
+
+// 商品
+message Product {
+    // id
+    string id = 1;
+    // 名称
+    string name = 2;
+    // 描述
+    string description = 3;
+    // 图片
+    string picture = 4;
+    // 价格
+    Money price_usd = 5;
+    // 分类
+    repeated string categories = 6;
+}
+
+// 商品列表响应
+message ListProductsResponse {
+    // 返回商品切片
+    repeated Product products = 1;
+}
+
+// 获得商品请求
+message GetProductRequest {
+    // 根据id查询
+    string id = 1;
+}
+
+// 搜索商品请求
+message SearchProductsRequest {
+    string query = 1;
+}
+
+// 搜索商品响应
+message SearchProductsResponse {
+    repeated Product results = 1;
+}

@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package microshopping;
+
+option go_package = "./proto;microshopping";
+
+message CartItem {
+  string product_id = 1;
+  int32 quantity = 2;
+}
+
+// 当前币种描述
+message Money {
+    // 货币code 例如：EUR 欧元 USD 美元
+    string currency_code = 1;
+  
+    // 货币单位
+    //  例如，如果currencyCode是USD，则1个单位是1美元。
+    int64 units = 2;
+  
+    //数量的纳米（10^-9）单位。
+    //该值必须介于-99999999和+99999999之间。
+    //如果单位为正，纳米必须为正或零。
+    //如果单位为零，纳米可以为正、零或负。
+    //如果单位为负，纳米必须为负或零。
+  
+    //例如，$-1.75表示为 单位＝-1 和 纳米＝-75000000。
+    int32 nanos = 3;
+}
+
+// ---------------配送服务Shipping Service----------
+// 配送服务接口
+service ShippingService {
+  // 获得价格
+  rpc GetQuote(GetQuoteRequest) returns (GetQuoteResponse) {}
+  // 配送订单
+  rpc ShipOrder(ShipOrderRequest) returns (ShipOrderResponse) {}
+}
+
+// 获得价格请求消息
+message GetQuoteRequest {
+  // 地址
+  Address address = 1;
+  repeated CartItem items = 2;
+}
+
+// 获得价格响应消息
+message GetQuoteResponse { Money cost_usd = 1; }
+
+// 配送请求
+message ShipOrderRequest {
+  Address address = 1;
+  repeated CartItem items = 2;
+}
+// 配送响应
+message ShipOrderResponse { string tracking_id = 1; }
+
+// 地址
+message Address {
+  string street_address = 1;
+  string city = 2;
+  string state = 3;
+  string country = 4;
+  int32 zip_code = 5;
+}

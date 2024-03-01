@@ -1,0 +1,51 @@
+{{ define "product" }}
+{{ template "header" . }}
+<div {{ with $.platform_css }} class="{{.}}" {{ end }}>
+  <span class="platform-flag">
+    {{$.platform_name}}
+  </span>
+</div>
+
+<main role="main">
+  <div class="h-product container">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="product-image" alt="" src="{{$.product.Item.Picture}}" />
+      </div>
+      <div class="product-info col-md-5">
+        <div class="product-wrapper">
+
+          <h2>{{ $.product.Item.Name }}</h2>
+          <p class="product-price">{{ renderMoney $.product.Price }}</p>
+          <p>{{ $.product.Item.Description }}</p>
+
+          <form method="POST" action="/cart">
+            <input type="hidden" name="product_id" value="{{$.product.Item.Id}}" />
+            <div class="product-quantity-dropdown">
+              <select name="quantity" id="quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>10</option>
+              </select>
+              <img src="/static/icons/Hipster_DownArrow.svg" alt="">
+            </div>
+            <button type="submit" class="cymbal-button-primary">添加到购物车</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    {{ if $.recommendations}}
+      {{ template "recommendations" $.recommendations }}
+    {{ end }}
+  </div>
+  <div class="ad">
+   {{ with $.ad }}{{ template "text_ad" . }}{{ end }}
+  </div>
+</main>
+{{ template "footer" . }}
+{{ end }}
