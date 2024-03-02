@@ -20,7 +20,7 @@
 * 结算微服务（checkoutservice）
 * 前端（frotend）
 
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/SpringBoot.png)
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/mic.png)
 
 #### 用户端文件如下：
 
