@@ -26,6 +26,7 @@
 ## 使用：
 * go语言环境
 * consul服务
+* 开发工具等环境<br>
 1.克隆项目到本地
 ```
 gi clone https://github.com/1280019840/Sportswear-mall.git](https://github.com/1280019840/Microservice-mall.git)
