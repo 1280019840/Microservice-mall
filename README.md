@@ -64,6 +64,7 @@ http://localhost:8500/ui/dc1/services
 ```
 ![image](https://github.com/1280019840/Microservice-mall/raw/main/img/consul.png)
 
+<br>
 ## 效果展示
 ![image](https://github.com/1280019840/Microservice-mall/raw/main/img/home1.png)
 ![image](https://github.com/1280019840/Microservice-mall/raw/main/img/home2.png)
@@ -72,6 +73,9 @@ http://localhost:8500/ui/dc1/services
 ![image](https://github.com/1280019840/Microservice-mall/raw/main/img/details2.png)
 
 ![image](https://github.com/1280019840/Microservice-mall/raw/main/img/cart_nil.png)
+
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/pay1.png)
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/pay2.png)
 #### 还有的页面可下载源码查看<br>
 #### 感谢观看，记得star谢谢
 
