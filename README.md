@@ -22,62 +22,33 @@
 
 ![image](https://github.com/1280019840/Microservice-mall/raw/main/img/mic.png)
 
-#### 用户端文件如下：
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/vue-user.png)
-
-#### 后台管理员端文件如下：
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/vue-admin.png)
-
-#### 数据库表如下：
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/MySQL.png)
 
 ## 使用：
-* Java语言环境
-* MySQL数据库
-* Vue安装
-#### 后端项目：
+* go语言环境
+* consul服务
 1.克隆项目到本地
 ```
-gi clone https://github.com/1280019840/Sportswear-mall.git
+gi clone https://github.com/1280019840/Sportswear-mall.git](https://github.com/1280019840/Microservice-mall.git)
 ```
-2.进入后端目录：
+2.每个系统微服务文件：
+比如：进入商品微服务productcatalogservice
 ```
-cd admin-main
+cd productcatalogservice
 ```
-3.更新pox.xml文件的依赖
-4.配置数据库，图片存放位置等信息
-
-#### 用户端：
-1.进入项目目录
+3.启动微服务
 ```
-cd vue-index
+go run main.go
 ```
-2.安装依赖
+重复以下步骤，直到每个微服务都启动成功
+#### 注意：结算微服务（checkoutservice）最后启动
+4.进入前端文件夹
 ```
-npm install
+cd frotend
 ```
-3.启动项目
+5.启动前端文件、handler、中间件
 ```
-npm run dev
+go run middleware.go handler.go rpc.go main.go
 ```
-
-#### 后台管理员端：
-1.进入项目目录
-```
-cd vue-admin
-```
-2.安装依赖
-```
-npm install
-```
-3.启动项目
-```
-npm run serve
-```
-
 ## 效果展示
 ![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/home1.png)
 ![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/home2.png)
