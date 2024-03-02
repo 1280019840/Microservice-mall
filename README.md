@@ -28,7 +28,7 @@
 * 开发工具等环境<br>
 1.克隆项目到本地
 ```
-gi clone https://github.com/1280019840/Microservice-mall.git
+git clone https://github.com/1280019840/Microservice-mall.git
 ```
 2.cd到Microservice-mall文件夹
 ```
