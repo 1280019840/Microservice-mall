@@ -29,54 +29,49 @@
 * 开发工具等环境<br>
 1.克隆项目到本地
 ```
-gi clone https://github.com/1280019840/Sportswear-mall.git](https://github.com/1280019840/Microservice-mall.git)
+gi clone https://github.com/1280019840/Microservice-mall.git
 ```
-2.每个系统微服务文件：
+2.cd到Microservice-mall文件夹
+```
+cd Microservice-mall
+```
+3.打开终端启动consul
+```
+consul agent -dev
+```
+4.启动每一个系统微服务文件：
 比如：进入商品微服务productcatalogservice
 ```
 cd productcatalogservice
 ```
-3.启动微服务
+5.启动微服务
 ```
 go run main.go
 ```
 重复以下步骤，直到每个微服务都启动成功
 #### 注意：结算微服务（checkoutservice）最后启动
-4.进入前端文件夹
+6.进入前端文件夹
 ```
 cd frotend
 ```
-5.启动前端文件、handler、中间件
+7.启动前端文件、handler、中间件
 ```
 go run middleware.go handler.go rpc.go main.go
 ```
+所以微服务都启动成功后可以查看consul
+```
+http://localhost:8500/ui/dc1/services
+```
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/consul.png)
+
 ## 效果展示
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/home1.png)
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/home2.png)
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/home3.png)
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/home1.png)
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/home2.png)
 
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/register.png)
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/details1.png)
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/details2.png)
 
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/login.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/category.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/details.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/cart.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/pay.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/order.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/forum.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/admin_home.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/goods_order.png)
-
-![image](https://github.com/1280019840/Sportswear-mall/raw/main/img/slideshow_admin.png)
-
+![image](https://github.com/1280019840/Microservice-mall/raw/main/img/cart_nil.png)
 #### 还有的页面可下载源码查看<br>
 #### 感谢观看，记得star谢谢
 
